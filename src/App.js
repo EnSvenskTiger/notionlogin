@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './Login';
 import Home from './Home';
 import NotionPage from './Blocks';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
