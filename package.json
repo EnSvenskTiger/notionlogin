@@ -11,7 +11,7 @@
     "cors": "^2.8.5",
     "cors-anywhere": "^0.4.4",
     "express": "^4.18.2",
-    "nodemon": "^2.0.21",
+    "nodemon": "^2.0.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-notion": "^0.10.0",

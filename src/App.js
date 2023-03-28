@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './Login';
 import Home from './Home';
 import NotionPage from './Blocks';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -10,11 +12,12 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/welcome" element={<Home />} />
         <Route path="/Blocks" element={<NotionPage />} />
+        <Route path="/Header" element={<Header/>} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
- //npm install react-router-dom
+ //npm install react-router-dom 
  
