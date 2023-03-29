@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, NavDropdown, Button, Container, Nav} from 'react-bootstrap';
 
-//import Form from 'react-bootstrap/Form';
+import Form from 'react-bootstrap/Form';
 /* import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container'; 
 import Nav from 'react-bootstrap/Nav';
@@ -9,8 +9,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown'; */
 
 /*function NavScrollExample() {
-  return ( */
-  export default function Header() {
+  return ( 
+  export default Header*/
+  
+  function Header() {
     return <Navbar bg="light" expand="lg">
         <Container fluid>
         <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
@@ -51,4 +53,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown'; */
     </Navbar>
 }
 
-/* export default NavScrollExample; */
+export default Header;
+
+/*export default NavScrollExample; */

@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (email === 'tiger@gmail.com' && password === 'janne123') {
-      navigate('/welcome');
+      navigate('/Header');
     } else {
       alert('Incorrect username or password');
     }
