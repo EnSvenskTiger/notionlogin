@@ -1,5 +1,6 @@
 import React from 'react';
-import { Navbar, NavDropdown, Button, Container, Nav} from 'react-bootstrap';
+import { Navbar, NavDropdown, Button, Container, Nav} from 'react-bootstrap'
+import tigercomputer from './images/assets/tigercomputer.jpg';
 
 import Form from 'react-bootstrap/Form';
 /* import Button from 'react-bootstrap/Button';
@@ -12,8 +13,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown'; */
   return ( 
   export default Header*/
   
-  function Header() {
-    return <Navbar bg="light" expand="lg">
+  function Header() { 
+    return <Navbar bg="light" expand="lg">    
         <Container fluid>
         <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -25,7 +26,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'; */
           >
             <Nav.Link href="#action1">Home</Nav.Link>
             <Nav.Link href="#action2">Login</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
+            <NavDropdown title="Link" id="navbarScrollingDropdown">          
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
@@ -51,8 +52,15 @@ import NavDropdown from 'react-bootstrap/NavDropdown'; */
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
+
+
 }
 
 export default Header;
+
+<body>
+<img src={tigercomputer} alt="tigercomputer"/>
+</body>
 
 /*export default NavScrollExample; */
