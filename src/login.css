@@ -1,97 +1,74 @@
-.container {
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
-  margin: 0;
-  padding: 0;
-}
+  }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-.modal {
-  margin: 0;
-  padding: 0;
-}
-
-.modal-content {
-  padding: 0;
-  margin: 0px;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
   border-radius: 10px;
-  max-width: none;
-}
-
-.modal-dialog {
-  max-height: none;
-  margin-right: auto; /* flytta login form närmare höger */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .image-container {
-  width: 700px !important;
-  height: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  flex-grow: 1;
-  overflow: hidden;
-}
-
-.image-container img {
-  width: 460px;
-  height: 680px;
-  object-fit: cover;
-  border-radius: 0;
-  border: none;
-}
-
-.form-control {
-  width: 200px;
-  max-width: 300px;
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-right: -2px;
-}
-
-.button-cancel {
-  margin-left: -10px;
-  margin-right: 40px;
-}
-
-.modal-body {
   margin-bottom: 20px;
 }
 
-.static-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.image-container img {
+  width: 322px;
+  height: 511px;
 }
 
-.custom-modal {
-  display: flex;
-  width: 460px;
-  height: 680px;
+label {
+  font-size: 1.0rem;
+  margin-top: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: none; /* ta bort box-shadow */
+  font-size: 1.2rem;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
 
-.custom-modal .modal-content {
-  border: none !important;
-  box-shadow: none;
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+}
+
+button {
+  background-color: #008080;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden; 
 }
 
 

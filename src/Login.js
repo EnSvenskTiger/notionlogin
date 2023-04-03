@@ -1,75 +1,60 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './login.css';
 import tigerImage from './images/tiger2.jpg';
 
-const Login = () => {
+function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     if (email === 'tiger@gmail.com' && password === 'janne123') {
       navigate('/Header');
     } else {
-      alert('Incorrect username or password');
+      alert('Felaktigt användarnamn eller lösenord');
     }
   };
 
   return (
-    <div className="container">
-      <Modal.Dialog className="custom-modal">
-        <Modal.Header>
-          <Modal.Title>Login</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Body>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Password:</label>
-              <input
-                type="password"
-                className="form-control"
-                id="password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-              />
-            </div>
-          </form>
-        </Modal.Body>
-
-        <Modal.Footer className="footer-modal">
-  <div className="button-container">
-    <Button type="submit" variant="primary" onClick={handleSubmit}>
-      Login
-    </Button>
-    <Button className="button-cancel" variant="secondary">
-      Cancel
-    </Button>
-  </div>
-</Modal.Footer>
-      </Modal.Dialog>
-
-      <div className="image-container">
-        <img src={tigerImage} alt="Tiger" />
-      </div>
+    <div className="login-container">
+      <form onSubmit={handleSubmit}>
+        <div className="image-container">
+          
+            <img src={tigerImage}
+            alt="Tiger"
+            width="322"
+            height="511"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email Adress:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+        </div>
+        <div className="button">
+        <button type="submit">Log in</button>
+        </div>
+      </form>
     </div>
   );
-};
+}
 
 export default Login;
-

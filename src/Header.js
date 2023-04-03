@@ -1,6 +1,5 @@
 import React from 'react';
-import { Navbar, NavDropdown, Button, Container, Nav} from 'react-bootstrap'
-import tigercomputer from './images/assets/tigercomputer.jpg';
+import { Navbar, NavDropdown, Button, Container, Nav} from 'react-bootstrap';
 
 import Form from 'react-bootstrap/Form';
 /* import Button from 'react-bootstrap/Button';
@@ -16,7 +15,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'; */
   function Header() { 
     return <Navbar bg="light" expand="lg">    
         <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="/Header">Menu</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -26,7 +25,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'; */
           >
             <Nav.Link href="#action1">Home</Nav.Link>
             <Nav.Link href="#action2">Login</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">          
+            <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
@@ -64,3 +63,17 @@ export default Header;
 </body>
 
 /*export default NavScrollExample; */
+
+/*            <NavDropdown title="Link" id="navbarScrollingDropdown">
+            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action4">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action5">
+                Something else here
+              </NavDropdown.Item>
+            </NavDropdown> 
+            <Nav.Link href="#" disabled>
+              Link
+            </Nav.Link>*/
