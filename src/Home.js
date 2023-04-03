@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react';
+import Header from './Header';
 
 
 function Home() {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [extraInfo, setExtraInfo] = useState("");
+  const myFunc = require('./Header.js');
 
   function submitFormToNotion(){
     console.log("lets gooooooooo");
@@ -29,18 +31,21 @@ function Home() {
       console.log("error", error)
     })
   }
+
   
   return (
+
     <div className="App">
+       <Header />
       <div style={{maxWidth: "500px", margin: "0 auto"}}>
-        <h1>Put your info below!</h1>
-        <p>Name</p>
+        <h1>Time Report</h1>
+        <p>Datum</p>
         <input type= "text" id= "name" onChange={(e) => setName(e.target.value)} />
 
-        <p>Phone Number</p>
+        <p>Time</p>
         <input type= "text" id= "phoneNumber" onChange={(e) => setPhoneNumber(e.target.value)} />
 
-        <p>Anything else?</p>
+        <p>Comments</p>
         <textarea onChange={(e) => setExtraInfo(e.target.value)} rows={10} cols={25} />
 
         <div>
