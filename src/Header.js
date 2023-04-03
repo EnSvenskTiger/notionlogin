@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, NavDropdown, Button, Container, Nav} from 'react-bootstrap';
+import tigercomputer from './images/assets/tigercomputer.jpg';
 
 import Form from 'react-bootstrap/Form';
 /* import Button from 'react-bootstrap/Button';
