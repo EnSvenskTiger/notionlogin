@@ -24,7 +24,7 @@ function Login() {
         <div className="image-container">
           
             <img src={tigerImage}
-            alt="Tiger"
+            alt="A tiger in an astronaut costume with a planet in the background"
             width="322"
             height="511"
           />

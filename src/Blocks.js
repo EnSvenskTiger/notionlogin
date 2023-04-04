@@ -34,9 +34,9 @@ const NotionPage = () => {
     
     return <div>
       <Header />
-    <h1 className='container'>{pageData.properties.Name.title[0].text.content}</h1>
+    <h1>{pageData.properties.Name.title[0].text.content}</h1>
     {Object.keys(pageData.properties).map((key) => (
-    <div className='container' key={key}>
+    <div key={key}>
     <h2>{key}</h2>
     <p>{JSON.stringify(pageData.properties[key])}</p>
     
