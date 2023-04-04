@@ -1,68 +1,41 @@
 import React from 'react';
-import { Navbar, NavDropdown, Button, Container, Nav, Form} from 'react-bootstrap';
-import tigercomputer from './images/assets/tigercomputer.jpg';
+import { Navbar, NavDropdown, Button, Container, Nav} from 'react-bootstrap';
+import './header.css';
+import Form from 'react-bootstrap/Form';
+import Image from './Image';
 
-function Header() { 
-  return (
-    <Navbar bg="light" expand="lg">    
-      <Container fluid>
-        <Navbar.Brand href="/Header">Menu</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Login</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
-          </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-}
-
-function ImageSection() {
-  return (
-    <div className="imagetigercomputer">
-      <img src={tigercomputer} alt="tigercomputer"/>
-      <footer>
-        <p id="copyright">
-          &copy; 2022 Teamtiger
-        </p>
-      </footer>
-    </div>
-  );
-}
-
-export default function App() {
+function Header({ showImage = true }) {
   return (
     <>
-      <Header />
-      <ImageSection />
+      <Navbar bg="light" expand="lg">
+        <Container fluid>
+          <Navbar.Brand href="/Header">Menu</Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: '100px' }}
+              navbarScroll
+            >
+              <Nav.Link href="/welcome">Report time</Nav.Link>
+              <Nav.Link href="/Blocks">My projects</Nav.Link>
+            </Nav>
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      {showImage && <Image />}
     </>
   );
 }
+
+export default Header;
+

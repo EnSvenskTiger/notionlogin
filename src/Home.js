@@ -4,6 +4,7 @@ import {useState} from 'react';
 import Header from './Header';
 
 
+
 function Home() {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -36,10 +37,10 @@ function Home() {
   return (
 
     <div className="App">
-       <Header />
+    <Header showImage={false} />
       <div style={{maxWidth: "500px", margin: "0 auto"}}>
         <h1>Time Report</h1>
-        <p>Datum</p>
+        <p>Date</p>
         <input type= "text" id= "name" onChange={(e) => setName(e.target.value)} />
 
         <p>Time</p>

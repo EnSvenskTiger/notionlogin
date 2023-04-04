@@ -59,7 +59,7 @@ const NotionPage = () => {
     }
     
     return <div>
-      <Header />
+    <Header showImage={false} />
     <h1>{pageData.properties.Name.title[0].text.content}</h1>
     {Object.keys(pageData.properties).map((key) => (
     <div key={key}>
