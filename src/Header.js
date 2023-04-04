@@ -1,21 +1,11 @@
 import React from 'react';
-import { Navbar, NavDropdown, Button, Container, Nav} from 'react-bootstrap';
+import { Navbar, NavDropdown, Button, Container, Nav, Form} from 'react-bootstrap';
 import tigercomputer from './images/assets/tigercomputer.jpg';
 
-import Form from 'react-bootstrap/Form';
-/* import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container'; 
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown'; */
-
-/*function NavScrollExample() {
-  return ( 
-  export default Header*/
-  
-  function Header() { 
-    return <Navbar bg="light" expand="lg">    
-        <Container fluid>
+function Header() { 
+  return (
+    <Navbar bg="light" expand="lg">    
+      <Container fluid>
         <Navbar.Brand href="/Header">Menu</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -52,29 +42,27 @@ import NavDropdown from 'react-bootstrap/NavDropdown'; */
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    
-
-
+  );
 }
 
-export default Header;
+function ImageSection() {
+  return (
+    <div className="imagetigercomputer">
+      <img src={tigercomputer} alt="tigercomputer"/>
+      <footer>
+        <p id="copyright">
+          &copy; 2022 Teamtiger
+        </p>
+      </footer>
+    </div>
+  );
+}
 
-<body>
-<img src={tigercomputer} alt="tigercomputer"/>
-</body>
-
-/*export default NavScrollExample; */
-
-/*            <NavDropdown title="Link" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown> 
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>*/
+export default function App() {
+  return (
+    <>
+      <Header />
+      <ImageSection />
+    </>
+  );
+}
